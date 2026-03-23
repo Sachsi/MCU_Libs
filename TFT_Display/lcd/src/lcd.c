@@ -56,9 +56,9 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 POSSIBILITY OF SUCH DAMAGE.
 */
 
-#include "lcd.h"
-#include "registers.h"
-#include "Fonts/fonts.h"
+#include "../include/minimal-cmake/lcd.h"
+#include "../include/minimal-cmake/registers.h"
+#include "../../Fonts/include/minimal-cmake/fonts.h"
 #include "stm32g0xx_hal.h"
 #include <string.h>
 

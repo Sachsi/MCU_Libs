@@ -1,8 +1,15 @@
-cmake_minimum_required(VERSION 3.22)
-project(tft_display_lib LANGUAGES C)
-add_library(${PROJECT_NAME})
-target_sources(${PROJECT_NAME} PRIVATE src/lcd.c)
-target_include_directories(
-  ${PROJECT_NAME}
-  PUBLIC $<BUILD_LOCAL_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>)
-target_compile_features(${PROJECT_NAME} PRIVATE c_std_17)
+cmake_minimum_required(VERSION 3.22.0)
+project(tft_display_lib VERSION 0.1.0 LANGUAGES C CXX)
+
+include(CTest)
+enable_testing()
+
+add_subdirectory(Fonts)
+add_subdirectory(lcd)
+add_subdirectory(printf)
+add_subdirectory(touch)
+
+
+set(CPACK_PROJECT_NAME ${PROJECT_NAME})
+set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
+include(CPack)

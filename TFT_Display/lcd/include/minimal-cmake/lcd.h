@@ -118,7 +118,7 @@ extern "C" {
 #endif
 
 #if defined (USE_MPALAND_PRINTF)
-#include <printf.h>
+#include "..\..\printf\include\minimal-cmake\printf.h"
 #else
 #include <stdio.h>
 #endif
